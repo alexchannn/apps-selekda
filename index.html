@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>DSGN Illustration Tool</title>
+   <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<!-- Welcome Screen -->
+<div id="welcome-screen">
+   <div class="logo"><span>DSGN</span></div>
+   <h1>DSGN</h1>
+</div>
+
+   <!-- Main App Container -->
+   <div id="app-container">
+      <div id="toolbar">
+         <button id="brush-tool">Brush</button>
+         <button id="eraser-tool">Eraser</button>
+         <button id="move-tool">Move</button>
+         <button id="shape-tool">Shape</button>
+         <button id="text-tool">Text</button>
+         <button id="clone-stamp-tool">Clone Stamp</button>
+         <button id="color-picker-tool">Color Picker</button>
+         <button id="paint-bucket-tool">Paint Bucket</button>
+         <button id="import-tool">Import</button>
+         <button id="export-tool">Export</button>
+      </div>
+
+      <!-- Work Area -->
+      <div id="work-area">
+         <canvas id="canvas" width="800" height="500"></canvas>
+      </div>
+
+      <!-- Properties Bar -->
+      <div id="properties-bar">
+         <label for="brush-size">Brush Size:</label>
+         <input type="range" id="brush-size" min="1" max="100">
+         <label for="brush-opacity">Opacity:</label>
+         <select id="brush-opacity">
+            <option value="0">0%</option>
+            <option value="50">50%</option>
+            <option value="100">100%</option>
+         </select>
+      </div>
+
+      <!-- Layer Bar -->
+      <div id="layer-bar">
+         <ul id="layer-list">
+            <li id="background-layer">Background</li>
+         </ul>
+      </div>
+
+      <!-- Zoom and Undo/Redo -->
+      <div id="controls">
+         <button id="undo">Undo <span id="undo-counter">0</span></button>
+         <button id="redo">Redo <span id="redo-counter">0</span></button>
+         <button id="zoom-in">Zoom In</button>
+         <button id="zoom-out">Zoom Out</button>
+         <span id="zoom-percentage">100%</span>
+      </div>
+   </div>
+</body>
+</html>
